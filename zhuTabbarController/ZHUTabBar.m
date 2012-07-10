@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 tencent. All rights reserved.
 //
 #define kBaseTagNumber                      (322)
+#define kDefaultTabBarAlpha                 (0.7)
 #define kBarTextFont                        (12.0)
 #import "ZHUTabBar.h"
 #import "ZHUTabBtn.h"
@@ -28,7 +29,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.center = CGPointMake(self.center.x, self.center.y - 100); 
         self.tabItems = [items copy];
         [self createTabBar];
     }
@@ -38,7 +38,7 @@
 - (void)createTabBar 
 {
     UIImageView *bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tb_background"]];
-    bgView.alpha = 0.5;
+    bgView.alpha = kDefaultTabBarAlpha;
     [self addSubview:bgView];
     NSLog(@"tab item count %d", self.tabItems.count);
     CGFloat width = self.frame.size.width / self.tabItems.count;
@@ -66,7 +66,7 @@
             // raise the image and push it right to center it
             btn.imageEdgeInsets = UIEdgeInsetsMake(-titleSize.height, 0.0, 0.0, -titleSize.width);
 
-            //[self addSubview:btn];
+            [self addSubview:btn];
         }
     }];
     
