@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZHUViewController.h"
 
-@interface ZHUFirstViewController : UIViewController
+@interface ZHUFirstViewController : ZHUViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *detailBtn1;
+@property (weak, nonatomic) IBOutlet UIButton *detailBtn2;
+- (IBAction)clickDetailBtn1:(id)sender;
+- (IBAction)clickDetailBtn2:(id)sender;
 @end

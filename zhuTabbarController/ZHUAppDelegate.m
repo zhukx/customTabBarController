@@ -11,6 +11,8 @@
 #import "ZHUFirstViewController.h"
 
 #import "ZHUSecondViewController.h"
+#import "ZHUDef.h"
+
 @interface ZHUAppDelegate ()
 - (void)observeNotify;
 @end

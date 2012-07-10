@@ -23,6 +23,9 @@
 		DD0B8D5D15AA694D00C5B89D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD0B8D5B15AA694D00C5B89D /* InfoPlist.strings */; };
 		DD0B8D6015AA694D00C5B89D /* zhuTabbarControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B8D5F15AA694D00C5B89D /* zhuTabbarControllerTests.m */; };
 		DD0B8D7C15AA6D5900C5B89D /* ZHUTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B8D7B15AA6D5900C5B89D /* ZHUTabBarViewController.m */; };
+		DD31722115ABBFF100160263 /* ZHUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD31722015ABBFF000160263 /* ZHUViewController.m */; };
+		DD31722615ABC1A900160263 /* ZHUDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD31722415ABC1A900160263 /* ZHUDetailViewController.m */; };
+		DD31722715ABC1A900160263 /* ZHUDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD31722515ABC1A900160263 /* ZHUDetailViewController.xib */; };
 		DD3D7B2C15AA78F200A883E6 /* ZHUTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3D7B2B15AA78F200A883E6 /* ZHUTabBar.m */; };
 		DD6CD42715AA7CFE00458E2F /* ZHUBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6CD42615AA7CFE00458E2F /* ZHUBadgeView.m */; };
 		DD9E3F3D15AAAEAA002F7662 /* ZHUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9E3F3C15AAAEAA002F7662 /* ZHUAdditions.m */; };
@@ -81,6 +84,11 @@
 		DD0B8D5F15AA694D00C5B89D /* zhuTabbarControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zhuTabbarControllerTests.m; sourceTree = "<group>"; };
 		DD0B8D7A15AA6D5900C5B89D /* ZHUTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHUTabBarViewController.h; sourceTree = "<group>"; };
 		DD0B8D7B15AA6D5900C5B89D /* ZHUTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHUTabBarViewController.m; sourceTree = "<group>"; };
+		DD31721F15ABBFF000160263 /* ZHUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHUViewController.h; sourceTree = "<group>"; };
+		DD31722015ABBFF000160263 /* ZHUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHUViewController.m; sourceTree = "<group>"; };
+		DD31722315ABC1A900160263 /* ZHUDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHUDetailViewController.h; sourceTree = "<group>"; };
+		DD31722415ABC1A900160263 /* ZHUDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHUDetailViewController.m; sourceTree = "<group>"; };
+		DD31722515ABC1A900160263 /* ZHUDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHUDetailViewController.xib; sourceTree = "<group>"; };
 		DD3D7B2A15AA78F200A883E6 /* ZHUTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHUTabBar.h; sourceTree = "<group>"; };
 		DD3D7B2B15AA78F200A883E6 /* ZHUTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHUTabBar.m; sourceTree = "<group>"; };
 		DD6CD42515AA7CFE00458E2F /* ZHUBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHUBadgeView.h; sourceTree = "<group>"; };
@@ -171,12 +179,17 @@
 				DD0B8D7815AA6D2B00C5B89D /* zhuTabbarController */,
 				DD0B8D3515AA694D00C5B89D /* ZHUAppDelegate.h */,
 				DD0B8D3615AA694D00C5B89D /* ZHUAppDelegate.m */,
+				DD31721F15ABBFF000160263 /* ZHUViewController.h */,
+				DD31722015ABBFF000160263 /* ZHUViewController.m */,
 				DD0B8D3815AA694D00C5B89D /* ZHUFirstViewController.h */,
 				DD0B8D3915AA694D00C5B89D /* ZHUFirstViewController.m */,
+				DD0B8D4615AA694D00C5B89D /* ZHUFirstViewController.xib */,
 				DD0B8D3F15AA694D00C5B89D /* ZHUSecondViewController.h */,
 				DD0B8D4015AA694D00C5B89D /* ZHUSecondViewController.m */,
-				DD0B8D4615AA694D00C5B89D /* ZHUFirstViewController.xib */,
 				DD0B8D4915AA694D00C5B89D /* ZHUSecondViewController.xib */,
+				DD31722315ABC1A900160263 /* ZHUDetailViewController.h */,
+				DD31722415ABC1A900160263 /* ZHUDetailViewController.m */,
+				DD31722515ABC1A900160263 /* ZHUDetailViewController.xib */,
 				DD0B8D2D15AA694D00C5B89D /* Supporting Files */,
 			);
 			path = zhuTabbarController;
@@ -341,6 +354,7 @@
 				DDCC5ADB15AA8EF400225842 /* tb_background@2x.png in Resources */,
 				DD9E3F4215AAC373002F7662 /* tab-arrow.png in Resources */,
 				DD9E3F4315AAC373002F7662 /* tab-arrow@2x.png in Resources */,
+				DD31722715ABC1A900160263 /* ZHUDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +398,8 @@
 				DD3D7B2C15AA78F200A883E6 /* ZHUTabBar.m in Sources */,
 				DDD2543A15AA7CCD003B2B5B /* ZHUTabBtn.m in Sources */,
 				DD6CD42715AA7CFE00458E2F /* ZHUBadgeView.m in Sources */,
+				DD31722115ABBFF100160263 /* ZHUViewController.m in Sources */,
+				DD31722615ABC1A900160263 /* ZHUDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
