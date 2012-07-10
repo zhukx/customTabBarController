@@ -63,7 +63,6 @@
     self.customTabBar = [[ZHUTabBar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - kDefaultTabbarHeight, self.view.frame.size.width, kDefaultTabbarHeight) 
                                                 tabItems:self.viewControllers];
     self.customTabBar.delegate = self;
-    self.customTabBar.backgroundColor = [UIColor blueColor];
     [self.view addSubview:self.customTabBar];
     [self.customTabBar moveIndicatorToIndex:self.selectedIndex animated:YES];
 }

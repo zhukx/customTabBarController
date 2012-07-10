@@ -9,6 +9,7 @@
 #define kBarTextFont                        (12.0)
 #import "ZHUTabBar.h"
 #import "ZHUTabBtn.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ZHUTabBar ()
 - (void)tabBarButtonClicked:(UIButton *)btn;
@@ -27,6 +28,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.center = CGPointMake(self.center.x, self.center.y - 100); 
         self.tabItems = [items copy];
         [self createTabBar];
     }
@@ -35,7 +37,8 @@
 
 - (void)createTabBar 
 {
-    UIImageView *bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tb_background.png"]];
+    UIImageView *bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tb_background"]];
+    bgView.alpha = 0.5;
     [self addSubview:bgView];
     NSLog(@"tab item count %d", self.tabItems.count);
     CGFloat width = self.frame.size.width / self.tabItems.count;
@@ -63,14 +66,14 @@
             // raise the image and push it right to center it
             btn.imageEdgeInsets = UIEdgeInsetsMake(-titleSize.height, 0.0, 0.0, -titleSize.width);
 
-            [self addSubview:btn];
+            //[self addSubview:btn];
         }
     }];
     
     _selectIndex = NSIntegerMax;
     
     UIView *btnView = [self viewWithTag:kBaseTagNumber];
-    UIImage *indicatorImg = [UIImage imageNamed:@"tab-arrow.png"];
+    UIImage *indicatorImg = [UIImage imageNamed:@"tb_arrow.png"];
     self.indicatorView = [[UIImageView alloc] initWithImage:indicatorImg];
     self.indicatorView.frame = CGRectMake((btnView.center.x - indicatorImg.size.width / 2), self.bounds.size.height - indicatorImg.size.height,
                                       indicatorImg.size.width, indicatorImg.size.height);
