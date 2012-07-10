@@ -9,6 +9,7 @@
 #define kBarTextFont                        (12.0)
 #import "ZHUTabBar.h"
 #import "ZHUTabBtn.h"
+#import "ZHUDef.h"
 
 @interface ZHUTabBar ()
 - (void)tabBarButtonClicked:(UIButton *)btn;

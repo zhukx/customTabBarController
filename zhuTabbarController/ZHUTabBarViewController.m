@@ -7,20 +7,23 @@
 //
 
 #import "ZHUTabBarViewController.h"
-
+#import "ZHUDef.h"
 @interface ZHUTabBarViewController ()
 - (void)hideRealTabBar;
 - (void)createCustomTabBar;
+- (void)initNotify;
 @end
 
 @implementation ZHUTabBarViewController
 @synthesize customTabBar = _customTabBar;
+@synthesize isHide = _isHide;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        _isHide = NO;
     }
     return self;
 }
@@ -30,6 +33,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self hideRealTabBar];
+    [self initNotify];
 }
 
 - (void)viewDidUnload
@@ -46,6 +50,23 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)initNotify 
+{
+    [[NSNotificationCenter defaultCenter] addObserverForName:kNofityHideTabBar
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [self hideTabbar:YES animated:YES];
+                                                  }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:kNofityShowTabBar
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [self hideTabbar:NO animated:YES];
+                                                  }];
 }
 
 - (void)hideRealTabBar
@@ -80,6 +101,8 @@
 
 - (void)hideTabbar:(BOOL)hide animated:(BOOL)animated
 {
+    [self hideRealTabBar];
+    _isHide = hide;
     if (hide) {
         if (animated) {
             [UIView animateWithDuration:0.3

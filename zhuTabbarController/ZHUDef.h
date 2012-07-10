@@ -13,6 +13,10 @@
 
 #define kNofityChangeBadge          (@"changeBadgeString")
 #define kNofityKeyBadgeContrller    (@"badgeController")
+#define kNofityHideTabBar           (@"hideTabBar")
+#define kNofityShowTabBar           (@"ShowTabBar")
+
+
 
 #define kTableViewCellRowHeight     (44.0)
 #define kDefaultToolbarHeight       (44.0)

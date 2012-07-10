@@ -12,7 +12,10 @@
 @interface ZHUTabBarViewController : UITabBarController <ZHUTabBarDelegate, UITabBarControllerDelegate> {
     
 }
+
 @property (strong, nonatomic) ZHUTabBar *customTabBar;
+@property (assign, nonatomic) BOOL isHide;
+
 - (void)hideTabbar:(BOOL)hide animated:(BOOL)animated;
 - (void)setBadgeValueForController:(UIViewController *)ctl;
 @end
